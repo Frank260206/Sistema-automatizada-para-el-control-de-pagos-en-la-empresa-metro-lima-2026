@@ -8,37 +8,39 @@ namespace Modelo_Proyecto_Grupal
 {
     public class SistemaTienda
     {
-        private List<Producto> inventario;
-        private Carrito miCarrito;
+        private Producto[] Inventario;
+        private int TotalInventario;
+        private Carrito MiCarrito;
 
         public SistemaTienda()
         {
-            inventario = new List<Producto>
-            {
-                new Producto("77501", "Leche Gloria 1L", 4.50, false, 20),
-                new Producto("77502", "Agua San Mateo 700ml", 2.50, false, 15),
-                new Producto("77503", "Cerveza Cusqueña 620ml", 8.90, true, 10)
-            };
+            Inventario = new Producto[10]; // Tamaño fijo para el inventario
+            TotalInventario = 0;
 
-            miCarrito = new Carrito();
+            Inventario[0] = new Producto("77501", "Leche Gloria 1L", 4.50, false, 20);
+            Inventario[1] = new Producto("77502", "Agua San Mateo 700ml", 2.50, false, 15);
+            Inventario[2] = new Producto("77503", "Cerveza Cusqueña 620ml", 8.90, true, 10);
+            TotalInventario = 3;
+
+            MiCarrito = new Carrito();
         }
 
         public void MostrarCatalogo()
         {
             Console.WriteLine("--- PRODUCTOS EN EL SISTEMA ---");
-            foreach (var p in inventario)
+            for (int i = 0; i < TotalInventario; i++)
             {
-                Console.WriteLine($"{p.MostrarDetalle()} | Stock: {p.Stock}");
+                Console.WriteLine($"{Inventario[i].MostrarDetalle()} | Stock: {Inventario[i].Stock}");
             }
         }
 
         public Producto BuscarProducto(string codigo)
         {
-            foreach (var p in inventario)
+            for (int i = 0; i < TotalInventario; i++)
             {
-                if (p.Codigo == codigo)
+                if (Inventario[i].Codigo == codigo)
                 {
-                    return p;
+                    return Inventario[i];
                 }
             }
             return null;
@@ -58,40 +60,57 @@ namespace Modelo_Proyecto_Grupal
 
                     if (respuesta.ToLower() == "s")
                     {
-                        Console.WriteLine("[SUPERVISOR]: Aprobado ✓");
-                        miCarrito.AgregarProducto(productoEncontrado);
+                        //--- VALIDACION DE DNI DENTRO DEL ESCANEO ---
+                        string dni = "";
+                        bool dniValido = false;
+
+                        while (!dniValido)
+                        {
+                            Console.WriteLine("Ingrese su DNI porfavor:");
+                            dni = Console.ReadLine();
+                            if (dni != null && dni.Length == 8)
+                            {
+                                dniValido = true;
+                                Console.WriteLine("[SUPERVISOR]: Aprobado ✓ | dni { dni} registrado.");
+                                MiCarrito.AgregarProducto(productoEncontrado);
+                            }
+                            else
+                            {
+                                Console.WriteLine(" [SUPERVISOR] X Error. DNI inválido. Debe tener 8 dígitos.");
+                            }
+                        }
+
                     }
                     else
                     {
-                        Console.WriteLine("[SUPERVISOR]: Venta denegada. Producto no agregado.");
+                        Console.WriteLine(" [SUPERVISOR] Venta denegada. Producto no agregado.");
                     }
                 }
                 else
                 {
-                    miCarrito.AgregarProducto(productoEncontrado);
+                    MiCarrito.AgregarProducto(productoEncontrado);
                 }
             }
             else
             {
-                Console.WriteLine("X Código no encontrado en el sistema.");
+                Console.WriteLine(" [SUPERVISOR] X Código no encontrado en el sistema.");
             }
         }
-
         public void VerCarritoActual()
         {
-            miCarrito.MostrarCarrito();
-            Console.WriteLine($"\nTotal parcial hasta el momento: S/. {miCarrito.CalcularTotal():F2}");
+            MiCarrito.MostrarCarrito();
+            Console.WriteLine($"\nTotal parcial hasta el momento: S/. {MiCarrito.CalcularTotal():F2}");
         }
 
         public void EliminarDelCarrito(string codigo)
         {
-            miCarrito.EliminarProducto(codigo);
+            MiCarrito.EliminarProducto(codigo);
         }
 
         public void PagarCompra()
         {
-            miCarrito.MostrarCarrito();
-            double totalFinal = miCarrito.CalcularTotal();
+            MiCarrito.MostrarCarrito();
+            double totalFinal = MiCarrito.CalcularTotal();
             Console.WriteLine($"\n========================================");
             Console.WriteLine($" TOTAL A PAGAR: S/. {totalFinal:F2}");
             Console.WriteLine($"========================================");
