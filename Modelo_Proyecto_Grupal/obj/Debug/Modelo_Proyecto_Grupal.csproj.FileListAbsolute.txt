@@ -1,0 +1,14 @@
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.exe.config
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.exe
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.pdb
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.csproj.AssemblyReference.cache
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.csproj.CoreCompileInputs.cache
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.exe
+C:\Users\home\Documents\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.pdb
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.exe.config
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.exe
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\bin\Debug\Modelo_Proyecto_Grupal.pdb
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.csproj.AssemblyReference.cache
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.csproj.CoreCompileInputs.cache
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.exe
+C:\Users\frank\Downloads\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\Modelo_Proyecto_Grupal\obj\Debug\Modelo_Proyecto_Grupal.pdb
